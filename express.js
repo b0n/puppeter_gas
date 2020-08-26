@@ -23,6 +23,9 @@ app.get('/download', (req, res) => {
     res.download('./example.png')
 });
 
-app.listen('3000', () => {
-    console.log('Application started');
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`App listening on port ${PORT}`);
+  console.log('Application started');
+  console.log('Press Ctrl+C to quit.');
 });
